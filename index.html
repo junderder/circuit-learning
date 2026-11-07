@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="电路学堂：面向电气工程及其自动化专业的电路课程自学网站，含 17 章系统讲解、119 道带解析的习题、6 个交互式计算与仿真工具、公式速查表。">
+<title>电路学堂 · 电路课程自学网站</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e7c86'/%3E%3Cpath d='M3 12h3l2-5 3 10 2.5-7 2 4h5.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var m=new URLSearchParams(location.search).get('theme');var t=m||JSON.parse(localStorage.getItem('circuitlab.v1.theme')||'null');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">电气工程及其自动化 · 专业核心课</span>
+          <h1>把电路学明白，<br><span class="hl">从看懂一张电路图开始</span></h1>
+          <p class="lead">17 章循序渐进的讲解、119 道带解析的习题、6 个可以动手调参的交互工具。从参考方向到三相电路，一步一步把《电路》这门课啃下来。</p>
+          <div class="hero-actions">
+            <a class="btn" href="chapters.html">开始学习 →</a>
+            <a class="btn ghost" href="tools.html">试试交互工具</a>
+          </div>
+          <div class="hero-badges">
+            <span class="chip"><i class="dot"></i>KCL / KVL</span>
+            <span class="chip"><i class="dot"></i>戴维南定理</span>
+            <span class="chip"><i class="dot"></i>一阶电路</span>
+            <span class="chip"><i class="dot"></i>相量法</span>
+            <span class="chip"><i class="dot"></i>三相电路</span>
+          </div>
+        </div>
+        <div class="hero-figure" aria-hidden="true">
+          <svg viewBox="0 0 420 300" role="img">
+            <defs>
+              <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="var(--accent)" stop-opacity=".9"/>
+                <stop offset="1" stop-color="var(--violet)" stop-opacity=".75"/>
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#hg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M60 90h70M200 90h60M300 90h60"/>
+              <circle cx="60" cy="90" r="24"/>
+              <path d="M60 66v48M50 78h20M50 102h20"/>
+              <rect x="130" y="76" width="70" height="28" rx="4"/>
+              <path d="M300 90v0"/>
+              <path d="M300 90h0"/>
+              <path d="M300 66v48"/>
+              <path d="M292 66h16M292 114h16"/>
+              <path d="M60 114v110h300v-110"/>
+              <rect x="130" y="196" width="70" height="28" rx="4"/>
+              <path d="M200 210h40"/>
+              <path d="M240 210c8-18 16-18 24 0s16 18 24 0"/>
+              <path d="M288 210h72"/>
+              <path d="M120 210h10"/>
+            </g>
+            <g fill="none" stroke="var(--accent-2)" stroke-width="1.4" opacity=".85">
+              <path d="M60 138v24M52 150h16"/>
+              <circle cx="60" cy="90" r="4" fill="var(--accent)"/>
+              <circle cx="300" cy="90" r="4" fill="var(--accent)"/>
+              <circle cx="300" cy="210" r="4" fill="var(--accent)"/>
+            </g>
+            <g fill="currentColor" font-size="12" font-family="Segoe UI, sans-serif" opacity=".75">
+              <text x="146" y="70">R₁</text>
+              <text x="146" y="190">R₂</text>
+              <text x="238" y="190">L</text>
+              <text x="28" y="172">u<tspan font-size="9" dy="2">s</tspan></text>
+              <text x="318" y="134">i</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 数据与进度 -->
+    <div class="grid cols-3 mt-3">
+      <div class="card pad-lg span-2">
+        <div class="ring-wrap">
+          <div class="ring" id="ring" style="--p:0"><b id="ring-text">0%</b></div>
+          <div class="ring-label">
+            <b id="ring-title">还没有开始</b>
+            <span id="ring-sub">完成章节阅读与课后练习即可累计进度</span>
+            <a class="btn small soft mt-1" href="chapters.html">去学习</a>
+          </div>
+          <div style="margin-left:auto" class="flex gap-2 flex-wrap">
+            <div class="stat"><b id="stat-read">0</b><span>已学章节</span></div>
+            <div class="stat"><b id="stat-quiz">0%</b><span>平均正确率</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card pad-lg">
+        <div class="stat" style="margin-bottom:14px"><b id="stat-chapters">17</b><span>章完整课程</span></div>
+        <div class="stat" style="margin-bottom:14px"><b id="stat-qcount">119</b><span>道详解习题</span></div>
+        <div class="stat" style="margin-bottom:14px"><b>13</b><span>条公式推导</span></div>
+        <div class="stat"><b>6</b><span>个交互工具</span></div>
+      </div>
+    </div>
+
+    <!-- 继续学习 -->
+    <div class="section-title">
+      <h2>继续学习</h2>
+      <span class="hint">按章节顺序推进，别跳着学</span>
+    </div>
+    <div id="continue-card"></div>
+
+    <!-- 学习路径 -->
+    <div class="section-title">
+      <h2>学习路径</h2>
+      <span class="hint">五个模块，17 章，从变量到复频域</span>
+    </div>
+    <div id="module-list" class="grid cols-3"></div>
+
+    <!-- 交互工具 -->
+    <div class="section-title">
+      <h2>动手调一调</h2>
+      <span class="hint">参数一变，波形立刻跟着变</span>
+    </div>
+    <div class="grid cols-3">
+      <a class="card" href="tools.html#rc">
+        <span class="tag accent">一阶电路</span>
+        <h3 class="mt-1">RC / RL 响应曲线</h3>
+        <p class="muted mb-0">拖动 R、C 滑块，观察时间常数如何决定充电快慢。</p>
+      </a>
+      <a class="card" href="tools.html#rlc">
+        <span class="tag accent">谐振</span>
+        <h3 class="mt-1">RLC 阻抗与谐振</h3>
+        <p class="muted mb-0">看感抗、容抗如何此消彼长，找到 ω₀ 那一点。</p>
+      </a>
+      <a class="card" href="tools.html#three">
+        <span class="tag accent">三相</span>
+        <h3 class="mt-1">三相电路计算器</h3>
+        <p class="muted mb-0">Y/Δ 切换，实时算出线值、相值与功率。</p>
+      </a>
+    </div>
+
+    <!-- 公式推导动画 -->
+    <div class="section-title">
+      <h2>看公式怎么来的</h2>
+      <span class="hint">逐步播放，关键项扫过高亮</span>
+    </div>
+    <div class="grid cols-2" style="align-items:start">
+      <div class="card pad-lg">
+        <span class="tag accent">13 条推导</span>
+        <h3 class="mt-1">从 KVL 到三相功率，一步一步推给你看</h3>
+        <p class="muted">戴维南定理、最大功率、三要素法、jωL、√3 的来源……每条 4—6 步，每步只改一处，先自己推一遍再对照着看。</p>
+        <div class="chapter-nav">
+          <a class="btn" href="derivations.html">打开推导动画 →</a>
+          <a class="btn ghost" href="derivations.html#maxpower">看最大功率</a>
+        </div>
+      </div>
+      <div class="derive-host" data-derive="thevenin"></div>
+    </div>
+
+    <!-- 今日一题 -->
+    <div class="section-title">
+      <h2>今日一题</h2>
+      <span class="hint">随手做一道，保持手感</span>
+    </div>
+    <div id="daily-quiz"></div>
+
+    <!-- 学习建议 -->
+    <div class="section-title">
+      <h2>怎么用这个站</h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>① 先读图文，再动手</h3>
+        <p class="muted mb-0">每章开头有“学习目标”，读完正文对照公式与例题，把易错点抄一遍。理解优先于记忆。</p>
+      </div>
+      <div class="card">
+        <h3>② 每章至少做 5 题</h3>
+        <p class="muted mb-0">进入本章练习，做错的题会自动进入错题本，第二天再刷一遍。</p>
+      </div>
+      <div class="card">
+        <h3>③ 用工具建立直觉</h3>
+        <p class="muted mb-0">公式记不住时，去交互工具里把参数拉到极端值，看看波形怎么变——直觉比公式更耐久。</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/app.js"></script>
+<script src="js/content-basics.js"></script>
+<script src="js/content-time.js"></script>
+<script src="js/content-ac.js"></script>
+<script src="js/content-advanced.js"></script>
+<script src="js/quiz-a.js"></script>
+<script src="js/quiz-b.js"></script>
+<script src="js/derive-data.js"></script>
+<script src="js/derive-player.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

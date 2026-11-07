@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="电路课程 17 章完整目录：从电路变量、基尔霍夫定律、戴维南定理，到一阶二阶电路、相量法、三相电路、二端口网络。">
+<title>课程章节 · 电路学堂</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e7c86'/%3E%3Cpath d='M3 12h3l2-5 3 10 2.5-7 2 4h5.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var m=new URLSearchParams(location.search).get('theme');var t=m||JSON.parse(localStorage.getItem('circuitlab.v1.theme')||'null');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-page="chapters">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container">
+    <div class="page-head">
+      <span class="eyebrow">课程目录</span>
+      <h1>17 章，一条完整的知识主线</h1>
+      <p class="lead">建议按顺序学：后面的分析方法和定理，全部建立在前面的变量、定律与等效之上。每章末尾都有“核心公式—典型例题—易错点”三段式总结。</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-mod="all" type="button">全部（17）</button>
+      <!-- 模块按钮由脚本插入 -->
+      <input class="search-input" id="search" type="search" placeholder="搜索章节，如“戴维南”" aria-label="搜索章节">
+    </div>
+
+    <div class="chapter-list" id="chapter-list"></div>
+
+    <div class="card mt-3" style="background:var(--surface-2)">
+      <h3>学习建议</h3>
+      <div class="grid cols-2 mt-1">
+        <div>
+          <p class="small"><b>第一轮（理解）</b>：读正文，重点看公式的适用条件与例题的解题步骤，不必强记。</p>
+          <p class="small mb-0"><b>第二轮（练习）</b>：每章做 5～7 道题，错题自动进入错题本。</p>
+        </div>
+        <div>
+          <p class="small"><b>第三轮（串联）</b>：学完第 9 章后回头把 1—9 章串成一张图；学完第 13 章后把正弦稳态部分串起来。</p>
+          <p class="small mb-0"><b>考前</b>：只看“核心公式”和“易错点”，再刷一遍错题本。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/app.js"></script>
+<script src="js/content-basics.js"></script>
+<script src="js/content-time.js"></script>
+<script src="js/content-ac.js"></script>
+<script src="js/content-advanced.js"></script>
+<script src="js/quiz-a.js"></script>
+<script src="js/quiz-b.js"></script>
+<script src="js/chapters.js"></script>
+</body>
+</html>

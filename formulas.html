@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="电路课程公式速查表：按模块分类的 90 余条核心公式，支持搜索，附适用条件与章节出处。">
+<title>公式速查 · 电路学堂</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e7c86'/%3E%3Cpath d='M3 12h3l2-5 3 10 2.5-7 2 4h5.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var m=new URLSearchParams(location.search).get('theme');var t=m||JSON.parse(localStorage.getItem('circuitlab.v1.theme')||'null');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-page="formulas">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container">
+    <div class="page-head">
+      <span class="eyebrow">公式速查</span>
+      <h1>考前只看这一页</h1>
+      <p class="lead">全部公式来自课程正文，按模块归类，每条都标注了使用条件。支持关键词搜索（例如“谐振”“戴维南”“补偿”）。</p>
+    </div>
+
+    <div class="filters" id="formula-filters">
+      <input class="search-input" id="formula-search" type="search" placeholder="搜索公式，如“谐振”“补偿”" aria-label="搜索公式">
+      <span class="small muted" id="formula-count"></span>
+      <button class="btn ghost small" type="button" id="formula-print" style="margin-left:auto">打印 / 存为 PDF</button>
+    </div>
+
+    <div id="formula-list"></div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/app.js"></script>
+<script src="js/content-basics.js"></script>
+<script src="js/content-time.js"></script>
+<script src="js/content-ac.js"></script>
+<script src="js/content-advanced.js"></script>
+<script src="js/derive-data.js"></script>
+<script src="js/formulas.js"></script>
+</body>
+</html>

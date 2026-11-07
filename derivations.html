@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="电路公式推导动画：分压、节点法、戴维南、最大功率、一阶三要素、相量阻抗、复功率、三相功率、变压器、谐振等 13 条推导，逐步播放并高亮关键项。">
+<title>公式推导 · 电路学堂</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e7c86'/%3E%3Cpath d='M3 12h3l2-5 3 10 2.5-7 2 4h5.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var m=new URLSearchParams(location.search).get('theme');var t=m||JSON.parse(localStorage.getItem('circuitlab.v1.theme')||'null');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-page="derive">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container">
+    <div class="page-head">
+      <span class="eyebrow">公式推导</span>
+      <h1>公式不是天上掉下来的</h1>
+      <p class="lead">13 条核心公式，拆成 4—6 步：每一步只改一处，新出现的关键项会扫过高亮。可以先自己推一遍，再点播放对照。</p>
+    </div>
+
+    <div class="derive-layout">
+      <aside class="card derive-list" aria-label="推导列表">
+        <input class="search-input" id="derive-search" type="search" placeholder="搜索推导…" aria-label="搜索推导" style="max-width:none;margin-bottom:10px">
+        <div id="derive-items"></div>
+        <p class="muted" style="font-size:12px;margin:10px 2px 0" id="derive-empty"></p>
+      </aside>
+
+      <div>
+        <div id="player-host"></div>
+
+        <div class="card mt-3" style="background:var(--surface-2)">
+          <div class="flex between center flex-wrap gap-1" style="margin-bottom:10px">
+            <h3 style="margin:0;font-size:1rem">步骤清单</h3>
+            <span class="small muted">点任意一步可跳转</span>
+          </div>
+          <ol class="derive-steps" id="step-list"></ol>
+        </div>
+
+        <div class="flex between center flex-wrap gap-2 mt-2">
+          <div class="chapter-nav">
+            <button class="btn ghost small" type="button" id="prev-derive">← 上一条推导</button>
+            <button class="btn ghost small" type="button" id="next-derive">下一条推导 →</button>
+          </div>
+          <a class="btn soft small" id="to-chapter" href="#">回本章复习 →</a>
+        </div>
+
+        <div class="callout info mt-3">
+          <div class="ico">⌨</div>
+          <div>
+            <h4>播放器操作</h4>
+            <p>点「播放推导」自动逐步演示；也可以按 <b>←</b> / <b>→</b> 单步、<b>空格</b> 播放或暂停、<b>Home</b> 回到第一步。右侧圆点可直接跳到某一步。速度可选 0.75×—1.5×。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/app.js"></script>
+<script src="js/content-basics.js"></script>
+<script src="js/content-time.js"></script>
+<script src="js/content-ac.js"></script>
+<script src="js/content-advanced.js"></script>
+<script src="js/derive-data.js"></script>
+<script src="js/derive-player.js"></script>
+<script src="js/derivations.js"></script>
+</body>
+</html>
